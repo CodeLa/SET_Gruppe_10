@@ -1,21 +1,25 @@
 package no.SetGruppe10.models;
 
 public class User {
-    private String id;
+    private int id;
     private String name;
     private String adminStatus;
 
-    public User(String id, String name, String adminStatus) {
+    public User(int id, String name, String adminStatus) {
         this.id = id;
         this.name = name;
         this.adminStatus = adminStatus;
     }
+    @Override
+    public String toString(){
+        return "Name: " + name + "\nID: " + id + "\nStatus: " + adminStatus;
+    }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -34,6 +38,18 @@ public class User {
     public void setAdminStatus(String adminStatus) {
         this.adminStatus = adminStatus;
     }
+    public String AdminStatus() {
+        if (adminStatus == "admin") {
+           return "You have access to all the features";
+        } else if(adminStatus == "non-admin"){
+            return "You have limited access";
+        }
+        else {
+            return null;
+        }
+
+    }
+
 
 
 }

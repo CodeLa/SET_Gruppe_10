@@ -1,20 +1,20 @@
 package no.SetGruppe10.models;
 
  abstract public class  DeviceFoundation {
-    private String DeviceName;
-    private Boolean isDeviceActive = true;
+    protected String deviceName;
+    protected Boolean isDeviceActive = true;
 
     public DeviceFoundation(String deviceName,  Boolean isDeviceActive) {
-        DeviceName = deviceName;
+        deviceName = deviceName;
         this.isDeviceActive = isDeviceActive;
     }
 
     public String getDeviceName() {
-        return DeviceName;
+        return deviceName;
     }
 
     public void setDeviceName(String deviceName) {
-        DeviceName = deviceName;
+        deviceName = deviceName;
     }
 
 
@@ -25,6 +25,6 @@ package no.SetGruppe10.models;
     public void setDeviceActive(Boolean deviceActive) {
         isDeviceActive = deviceActive;
     }
-    abstract void deviceActiveStatus();
+
 
 }

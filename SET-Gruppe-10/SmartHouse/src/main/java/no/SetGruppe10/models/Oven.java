@@ -12,7 +12,7 @@ public class Oven extends DeviceFoundation implements DeviceOnSendAlert {
     }
     @Override
     public String toString(){
-        return "Name: " + deviceName + "\nActive Status: " + isDeviceActive + "\nOn/Off: " + isOvenOn;
+        return "Name: " + deviceName + "\nActive Status: " + isDeviceActive + "\nOn: " + isOvenOn;
     }
 
     public Boolean getOvenOn() {
@@ -24,7 +24,7 @@ public class Oven extends DeviceFoundation implements DeviceOnSendAlert {
     }
 
     @Override
-    public void turnOff() {
+    public void safetyTurnOff() {
         if(isOvenOn == true){
             System.out.println("Status: Off");
         } else if (isOvenOff == true){

@@ -1,5 +1,5 @@
-package no.SetGruppe10.models;
+package no.SetGruppe10.models.deviceAlertFunctions;
 
-public interface IsDeviceOff {
+public interface DeviceOnSendAlert {
     void turnOff();
 }

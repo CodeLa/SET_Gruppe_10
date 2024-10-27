@@ -1,4 +1,5 @@
 package no.SetGruppe10.models.deviceAlertFunctions;
 
-public interface SendAlertGasLeak {
+public interface GasLeakSendAlert {
+    void gasLeakDetetcted();
 }

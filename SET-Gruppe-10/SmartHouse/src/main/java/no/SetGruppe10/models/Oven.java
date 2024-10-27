@@ -1,6 +1,8 @@
 package no.SetGruppe10.models;
 
-public class Oven extends DeviceFoundation implements IsDeviceOff {
+import no.SetGruppe10.models.deviceAlertFunctions.DeviceOnSendAlert;
+
+public class Oven extends DeviceFoundation implements DeviceOnSendAlert {
     private Boolean isOvenOn;
     private Boolean isOvenOff;
     public Oven(String deviceName,  Boolean isDeviceActive, Boolean isOvenOn){

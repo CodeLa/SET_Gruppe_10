@@ -12,6 +12,12 @@ public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, De
     }
 
     @Override
+    public String toString(){
+        return "Device Name: " + deviceName + "\nActicve" + isDeviceActive + "\nOutside Temp: " +
+                outSideTemp + "\nInside Temp: " + insideTemp;
+    }
+
+    @Override
     public void turnDeviceOff() {
 
     }
@@ -19,6 +25,10 @@ public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, De
     @Override
     public void turnDeviceOn() {
 
+    }
+
+    public int standardTemp(TempratureAdjuster tempObject){
+        return (tempObject.insideTemp + tempObject.outSideTemp);
     }
 
     public int changeTemp(int temp){

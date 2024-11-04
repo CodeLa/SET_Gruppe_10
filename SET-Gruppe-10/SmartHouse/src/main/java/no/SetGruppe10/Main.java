@@ -13,6 +13,11 @@ public class Main {
         User user4 = new User(32565, "Kelly bardaw", "admin");
 
         Oven oven1 = new Oven("Boch Oven",  true, true);
+        SmartDoorController Door1 = new SmartDoorController("Door Object 1", true,
+                false, "No motion");
+
+        Door1.Close();
+        Door1.deviceIsOpenAlert();
 
         System.out.println(user1.AdminStatus());
         System.out.println(user2.AdminStatus());

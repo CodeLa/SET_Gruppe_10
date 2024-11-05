@@ -14,7 +14,7 @@ public class Main {
 
         Oven oven1 = new Oven("Boch Oven",  true, true);
         SmartDoorController Door1 = new SmartDoorController("Door Object 1", true,
-                false, "No motion");
+                false, true);
 
         Door1.Close();
         Door1.deviceIsOpenAlert();

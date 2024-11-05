@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SmartDoorControllerTest {
     public void SendsAlertCorrect(){
         SmartDoorController door = new SmartDoorController("Test1", true,
-                true, "no motion");
+                true, false);
 
 
     }

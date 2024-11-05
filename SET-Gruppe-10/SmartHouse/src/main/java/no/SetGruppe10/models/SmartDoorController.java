@@ -4,17 +4,17 @@ import no.SetGruppe10.models.deviceAlertFunctions.DeviceOpenSendAlert;
 
 public class SmartDoorController extends DeviceFoundation implements Open, Close, DeviceOpenSendAlert {
     private Boolean isDoorOpen;
-    private String HomeStatus;
-    public SmartDoorController(String deviceName, Boolean isDeviceActive, Boolean isDoorOpen, String HomeStatus) {
+    private Boolean motionDetected;
+    public SmartDoorController(String deviceName, Boolean isDeviceActive, Boolean isDoorOpen, Boolean motiondetectede) {
         super(deviceName, isDeviceActive);
         this.isDoorOpen = isDoorOpen;
-        this.HomeStatus = HomeStatus;
+        this.motionDetected = motiondetectede;
     }
 
     @Override
     public String toString(){
         return "Name: " + deviceName + "\nActive Status: " + isDeviceActive + "\nClosed: " + isDoorOpen
-                + "\nHome Status: " + HomeStatus;
+                + "\nMotion detected: " + motionDetected;
     }
 
     @Override
@@ -40,12 +40,16 @@ public class SmartDoorController extends DeviceFoundation implements Open, Close
     }
     @Override
     public void deviceIsOpenAlert() {
-       if(isDoorOpen == true && HomeStatus == "no motion"){
-           System.out.println("ALERT: THE DOOR IS OPEN");
+       if(isDoorOpen == true && motionDetected == false){
+           System.out.println("ALERT!: THE DOOR IS OPEN");
        }
-       if(isDoorOpen == false && HomeStatus == "motion"){
-           System.out.println("-");
+       if(isDoorOpen == false && motionDetected == true){
+           System.out.println("ALERT!: Someone is Inside");
        }
+       if(isDoorOpen == false && motionDetected == false){
+           System.out.println("Home Staus: DOOR LOCKED AND NO MOTION DETECTED :)");
+       }
+       if(isDoorOpen == )
 
     }
 

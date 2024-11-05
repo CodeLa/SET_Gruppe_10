@@ -1,4 +1,8 @@
-package no.SetGruppe10.models;
+package no.SetGruppe10.models.Classes;
+
+import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
+import no.SetGruppe10.models.Interfaces.DeviceOff;
+import no.SetGruppe10.models.Interfaces.DeviceOn;
 
 public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, DeviceOff {
 

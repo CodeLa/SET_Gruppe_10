@@ -1,4 +1,4 @@
-package no.SetGruppe10.models;
+package no.SetGruppe10.models.AbstractClasses;
 
  abstract public class  DeviceFoundation {
     protected String deviceName;

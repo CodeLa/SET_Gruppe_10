@@ -1,4 +1,4 @@
-package no.SetGruppe10.models;
+package no.SetGruppe10.models.Classes;
 
 public class User {
     private int id;

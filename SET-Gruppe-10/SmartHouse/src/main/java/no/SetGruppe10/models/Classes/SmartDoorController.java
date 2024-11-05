@@ -1,5 +1,8 @@
-package no.SetGruppe10.models;
+package no.SetGruppe10.models.Classes;
 
+import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
+import no.SetGruppe10.models.Interfaces.Close;
+import no.SetGruppe10.models.Interfaces.Open;
 import no.SetGruppe10.models.deviceAlertFunctions.DeviceOpenSendAlert;
 
 public class SmartDoorController extends DeviceFoundation implements Open, Close, DeviceOpenSendAlert {
@@ -41,15 +44,18 @@ public class SmartDoorController extends DeviceFoundation implements Open, Close
     @Override
     public void deviceIsOpenAlert() {
        if(isDoorOpen == true && motionDetected == false){
-           System.out.println("ALERT!: THE DOOR IS OPEN");
+           System.out.println("ALERT!: DOOR: OPEN");
        }
        if(isDoorOpen == false && motionDetected == true){
-           System.out.println("ALERT!: Someone is Inside");
+           System.out.println("ALERT!: MOTION DETECTED");
        }
        if(isDoorOpen == false && motionDetected == false){
            System.out.println("Home Staus: DOOR LOCKED AND NO MOTION DETECTED :)");
        }
-       if(isDoorOpen == )
+       if(isDoorOpen == true && motionDetected == true){
+           System.out.println("DOOR OPEN AND MOTION DETECTED");
+
+       }
 
     }
 

@@ -1,4 +1,4 @@
-package no.SetGruppe10.models.Classes;
+package no.SetGruppe10.models.Enheter;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.Close;
@@ -21,23 +21,23 @@ public class SmartDoorController extends DeviceFoundation implements Open, Close
     }
 
     @Override
-    public void Close() {
+    public String Close() {
         if(isDoorOpen == true){
-            System.out.println("LOCKING DOOR ACTIVATED");
+            return "The Door is Closed";
         }
         else {
-            System.out.println("ALREADY CLOSED");
+            return "The Door is Already Closed";
         }
 
     }
 
     @Override
-    public void open() {
+    public String open() {
         if(isDoorOpen == false){
-            System.out.println("OPEN DOOR ACTIVATED");
+            return "The Door Is Open Now";
         }
         else {
-            System.out.println("ALREADY OPEN");
+            return "The Door Was Already Open";
         }
 
     }

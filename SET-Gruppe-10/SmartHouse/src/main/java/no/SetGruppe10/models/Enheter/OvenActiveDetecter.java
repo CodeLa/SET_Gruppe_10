@@ -1,12 +1,12 @@
-package no.SetGruppe10.models.Classes;
+package no.SetGruppe10.models.Enheter;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.deviceAlertFunctions.DeviceOnSendAlert;
 
-public class OvenController extends DeviceFoundation implements DeviceOnSendAlert {
+public class OvenActiveDetecter extends DeviceFoundation implements DeviceOnSendAlert {
     private Boolean isOvenOn;
     private Boolean isOvenOff;
-    public OvenController(String deviceName, Boolean isDeviceActive, Boolean isOvenOn){
+    public OvenActiveDetecter(String deviceName, Boolean isDeviceActive, Boolean isOvenOn){
         super(deviceName, isDeviceActive);
         this.isOvenOn = isOvenOn;
 

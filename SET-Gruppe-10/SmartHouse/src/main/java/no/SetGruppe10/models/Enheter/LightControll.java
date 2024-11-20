@@ -1,4 +1,4 @@
-package no.SetGruppe10.models.Classes;
+package no.SetGruppe10.models.Enheter;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.DeviceOff;
@@ -19,13 +19,14 @@ public class LightControll extends DeviceFoundation implements DeviceOn, DeviceO
         isLightOn = lightOn;
     }
 
-    @Override
-    public void turnDeviceOff() {
 
+    @Override
+    public String turnDeviceOff() {
+        return "";
     }
 
     @Override
-    public void turnDeviceOn() {
-
+    public String turnDeviceOn() {
+        return "";
     }
 }

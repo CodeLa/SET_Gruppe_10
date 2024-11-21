@@ -1,4 +1,4 @@
-package no.SetGruppe10.models.Enheter;
+package no.SetGruppe10.models.Devices;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.DeviceOff;
@@ -51,17 +51,6 @@ public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, De
 
     }
 
-    public String standardTemp(TempratureAdjuster tempObject){
-        if(tempObject.outSideTemp < 5){
-            return "Standard Temprature: " + 25;
-        }
-        if(tempObject.outSideTemp > 25){
-            return "Standard Temprature: " + 22;
-        }
-        else {
-            return "Standard Temprature: " + 22;
-        }
-    }
 
 
 }

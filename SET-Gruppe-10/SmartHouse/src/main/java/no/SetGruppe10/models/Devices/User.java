@@ -1,11 +1,11 @@
-package no.SetGruppe10.models.Enheter;
+package no.SetGruppe10.models.Devices;
 
-public class User {
+public class UserAdminInfo {
     private int id;
     private String name;
     private String adminStatus;
 
-    public User(int id, String name, String adminStatus) {
+    public UserAdminInfo(int id, String name, String adminStatus) {
         this.id = id;
         this.name = name;
         this.adminStatus = adminStatus;

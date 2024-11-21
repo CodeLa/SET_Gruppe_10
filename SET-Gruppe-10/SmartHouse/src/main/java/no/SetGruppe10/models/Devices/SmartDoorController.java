@@ -1,4 +1,4 @@
-package no.SetGruppe10.models.Enheter;
+package no.SetGruppe10.models.Devices;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.Close;
@@ -8,6 +8,7 @@ import no.SetGruppe10.models.deviceAlertFunctions.DeviceOpenSendAlert;
 public class SmartDoorController extends DeviceFoundation implements Open, Close, DeviceOpenSendAlert {
     private Boolean isDoorOpen;
     private Boolean motionDetected;
+
     public SmartDoorController(String deviceName, Boolean isDeviceActive, Boolean isDoorOpen, Boolean motiondetectede) {
         super(deviceName, isDeviceActive);
         this.isDoorOpen = isDoorOpen;
@@ -15,17 +16,16 @@ public class SmartDoorController extends DeviceFoundation implements Open, Close
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Name: " + deviceName + "\nActive Status: " + isDeviceActive + "\nClosed: " + isDoorOpen
                 + "\nMotion detected: " + motionDetected;
     }
 
     @Override
     public String Close() {
-        if(isDoorOpen == true){
+        if (isDoorOpen == true) {
             return "The Door is Closed";
-        }
-        else {
+        } else {
             return "The Door is Already Closed";
         }
 
@@ -33,29 +33,32 @@ public class SmartDoorController extends DeviceFoundation implements Open, Close
 
     @Override
     public String open() {
-        if(isDoorOpen == false){
+        if (isDoorOpen == false) {
             return "The Door Is Open Now";
-        }
-        else {
+        } else {
             return "The Door Was Already Open";
         }
 
     }
-    @Override
-    public void deviceIsOpenAlert() {
-       if(isDoorOpen == true && motionDetected == false){
-           System.out.println("ALERT!: DOOR: OPEN");
-       }
-       if(isDoorOpen == false && motionDetected == true){
-           System.out.println("ALERT!: MOTION DETECTED");
-       }
-       if(isDoorOpen == false && motionDetected == false){
-           System.out.println("Home Staus: DOOR LOCKED AND NO MOTION DETECTED :)");
-       }
-       if(isDoorOpen == true && motionDetected == true){
-           System.out.println("DOOR OPEN AND MOTION DETECTED");
 
-       }
+    @Override
+    public String deviceIsOpenAlert() {
+        if (isDoorOpen == true && motionDetected == false) {
+            return ("ALERT!: DOOR: OPEN");
+        }
+        if (isDoorOpen == false && motionDetected == true) {
+            return ("ALERT!: MOTION DETECTED");
+        }
+        if (isDoorOpen == false && motionDetected == false) {
+            return ("Home Staus: DOOR LOCKED AND NO MOTION DETECTED :)");
+        }
+        if (isDoorOpen == true && motionDetected == true) {
+            return ("DOOR OPEN AND MOTION DETECTED");
+
+        }
+        else {
+            return "Something Went Wrong";
+        }
 
     }
 

@@ -1,9 +1,10 @@
-package no.SetGruppe10.models.Enheter;
+package no.SetGruppe10.models.Devices;
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
+import no.SetGruppe10.models.Interfaces.DeviceOff;
 import no.SetGruppe10.models.deviceAlertFunctions.DeviceOnSendAlert;
 
-public class OvenActiveDetecter extends DeviceFoundation implements DeviceOnSendAlert {
+public class OvenActiveDetecter extends DeviceFoundation implements DeviceOff,DeviceOnSendAlert {
     private Boolean isOvenOn;
     private Boolean isOvenOff;
     public OvenActiveDetecter(String deviceName, Boolean isDeviceActive, Boolean isOvenOn){
@@ -24,12 +25,24 @@ public class OvenActiveDetecter extends DeviceFoundation implements DeviceOnSend
         isOvenOn = ovenOn;
     }
 
+
     @Override
-    public void safetyTurnOff() {
+    public String turnDeviceOff() {
+        if(isOvenOn == true ){
+            return "The Device Is Turned Off";
+        }
+        else {
+            return "The Device Was Already Off";
+        }
+    }
+
+    @Override
+    public String safetyAlert() {
         if(isOvenOn == true){
-            System.out.println("Status: Off");
-        } else if (isOvenOff == true){
-            System.out.println("Status: Already Off");
+            return "ALERT: THE OVEN IS ON";
+        }
+        else {
+            return "THE OVEN WAS ALERADY OFF:)";
         }
     }
 }

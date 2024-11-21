@@ -1,4 +1,4 @@
-package no.SetGruppe10.models.Enheter;
+package no.SetGruppe10.models.Devices;
 
 public class User {
     private int id;

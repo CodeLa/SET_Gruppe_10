@@ -1,5 +1,5 @@
 package no.SetGruppe10;
-import no.SetGruppe10.models.Enheter.*;
+import no.SetGruppe10.models.Devices.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,9 +13,7 @@ public class Main {
         //oppretter en enhet for temprature
         TempratureAdjuster tempratureAdjusterUnit1 = new TempratureAdjuster("UnitTemprature",
                 true, 25);
-        System.out.println(tempratureAdjusterUnit1);
-        tempratureAdjusterUnit1.turnDeviceOn();
-
+        SmartDoorController houseDoor = new SmartDoorController("UnitDoor", true, true, true);
 
     }
 }

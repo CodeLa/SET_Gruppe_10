@@ -10,10 +10,16 @@ public class Main {
         UserAdminInfo user3 = new UserAdminInfo(45646, "Carly Joe", "non-admin");
         UserAdminInfo user4 = new UserAdminInfo(32565, "Kelly bardaw", "admin");
 
+        //Opretter en Smart Dør
+        SmartDoorController houseDoor = new SmartDoorController("UnitDoor", true, true, true);
         //oppretter en enhet for temprature
         TempratureAdjuster tempratureAdjusterUnit1 = new TempratureAdjuster("UnitTemprature",
                 true, 25);
-        SmartDoorController houseDoor = new SmartDoorController("UnitDoor", true, true, true);
+        //Opretter en Lys enhet som skal være i stua
+        LightControll livingRoomLights = new LightControll("LD-lIGHTS", true, false);
+        //Oppretter en Ovn Enhet
+        OvenActiveDetecter firstOven = new OvenActiveDetecter("Ovn-enehet", true,true);
+
 
     }
 }

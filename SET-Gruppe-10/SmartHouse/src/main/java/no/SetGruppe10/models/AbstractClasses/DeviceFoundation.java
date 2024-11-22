@@ -1,5 +1,7 @@
 package no.SetGruppe10.models.AbstractClasses;
 
+//Denne klassen er ment for være en basis standard for alle enheter/klasser
+//Den holder på informasjoner som Navn på enhetene og om den er aktiv eller ikke.
  abstract public class  DeviceFoundation {
     protected String deviceName;
     protected Boolean isDeviceActive = true;

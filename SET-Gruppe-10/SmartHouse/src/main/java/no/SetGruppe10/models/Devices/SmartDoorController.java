@@ -1,4 +1,7 @@
 package no.SetGruppe10.models.Devices;
+//Denne klassen er ment for å styre døren(åpne/låse)
+//Den har inneholder funksjoner som sender en Varsel melding basert på husets verdier
+//Verdier som: motionDetetcted == true && isDoorOpen == true
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.Close;

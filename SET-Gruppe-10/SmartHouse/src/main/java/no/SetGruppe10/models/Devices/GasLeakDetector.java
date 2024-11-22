@@ -1,7 +1,8 @@
 package no.SetGruppe10.models.Devices;
 
 /*/
-Denne klassen er ment for å representer en enhet som måler gassnivået i huse
+Denne klassen er ment for å representer en enhet som måler gassnivået i huset
+basert på gassnivået skal den sen en varsel melding
  */
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;

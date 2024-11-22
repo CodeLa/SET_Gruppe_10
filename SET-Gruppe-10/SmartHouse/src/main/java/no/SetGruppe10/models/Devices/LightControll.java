@@ -1,5 +1,5 @@
 package no.SetGruppe10.models.Devices;
-
+//Denne klassen er ment får å kontrollere lys(slå av og slå på)
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.DeviceOff;
 import no.SetGruppe10.models.Interfaces.DeviceOn;

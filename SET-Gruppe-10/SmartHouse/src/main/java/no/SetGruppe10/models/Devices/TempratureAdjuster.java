@@ -1,4 +1,9 @@
 package no.SetGruppe10.models.Devices;
+//Denne gir deg muligheten å slå av/på enheten
+//Gir brukeren muligheten å velge tempratur
+/*/
+  For videreutvikling av enheten er det mulig å automatisere basert på tempraturen ute(årstid)
+ */
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.DeviceOff;

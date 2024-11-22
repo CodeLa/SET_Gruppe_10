@@ -1,5 +1,12 @@
 package no.SetGruppe10.models.Devices;
 
+//Denne er får info om brukerene
+//Hvilket roller hver bruker har ved hjelp av funkjonen adminStatus
+/*/
+  for videreutvikling av userAdminInfo kan man gjøre sånn at hvis man er admin
+  så kan man ha tilgang og ikke-admin må spørre admin om tilatelse
+ */
+
 public class UserAdminInfo {
     private int id;
     private String name;

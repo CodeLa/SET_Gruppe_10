@@ -1,4 +1,6 @@
 package no.SetGruppe10.models.Devices;
+//Denne klassen er ment for sende en varsel melding hvis ovnen er på
+//Den har mulighet til å slå av ovnen(ikke på)
 
 import no.SetGruppe10.models.AbstractClasses.DeviceFoundation;
 import no.SetGruppe10.models.Interfaces.DeviceOff;

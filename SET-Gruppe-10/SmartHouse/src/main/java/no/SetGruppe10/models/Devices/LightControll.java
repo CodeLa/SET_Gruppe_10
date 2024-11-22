@@ -10,6 +10,10 @@ public class LightControll extends DeviceFoundation implements DeviceOn, DeviceO
         super(deviceName, isDeviceActive);
         this.isLightOn = isLightOn;
     }
+    @Override
+    public String toString(){
+        return "Device Name: " + deviceName + "\nActive Status: " + isDeviceActive + "\nLights On: " + isLightOn;
+    }
 
     public Boolean getLightOn() {
         return isLightOn;

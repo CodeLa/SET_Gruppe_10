@@ -24,7 +24,7 @@ public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, De
 
     @Override
     public String toString(){
-        return "Device Name: " + deviceName + "\nActicve" + isDeviceActive + "\nOutside Temp: " +
+        return "Device Name: " + getDeviceName() + "\nActicve: " + isDeviceActive + "\nOutside Temp: " +
                 outSideTemp;
     }
 

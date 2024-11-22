@@ -51,10 +51,10 @@ public class GasLeakDetector extends DeviceFoundation implements DeviceOff, Devi
 
     @Override
     public String gasLeakDetetctedSendAlert() {
-        if (gasLevel >= 50) {
+        if (gasLevel >= 50 && gasLevel <= 199) {
             return "Carbon Monoxide Detected";
         }
-        if (gasLevel >= 200) {
+        if (gasLevel >= 200 && gasLevel <=799) {
             return "Dangerous Levels Of Carbon Monoxide, Call the Fire departemnt";
         }
         if (gasLevel >= 800) {

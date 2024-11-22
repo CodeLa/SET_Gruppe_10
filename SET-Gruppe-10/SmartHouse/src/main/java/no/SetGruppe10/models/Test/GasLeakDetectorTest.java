@@ -31,9 +31,35 @@ class GasLeakDetectorTest {
     @Test
     @DisplayName("Test is a success: The Device Was Already Off")
     public void GasLeakDeviceOffTest2(){
-        GasLeakDetector gasLeakDeviceTurnOffTest2 = new GasLeakDetector("GasLeakDeviceTest", true, 40);
-        assertEquals(" Device Was Already Off ", gasLeakDeviceTurnOffTest2.turnDeviceOff());
+        GasLeakDetector gasLeakDeviceTurnOffTest2 = new GasLeakDetector("GasLeakDeviceTest", false, 40);
+        assertEquals("Device Was Already Off", gasLeakDeviceTurnOffTest2.turnDeviceOff());
     }
+    @Test
+    @DisplayName("Test is a success: Carbon Monoxide detected")
+    public void GasLeakDeviceSendAlert(){
+        GasLeakDetector gasLeakDeviceSendAlert = new GasLeakDetector("GasLeakDeviceTest", true, 51);
+        assertEquals("Carbon Monoxide Detected", gasLeakDeviceSendAlert.gasLeakDetetctedSendAlert());
+    }
+    @Test
+    @DisplayName("Test is a success: Dangerous Levels Of Carbon Monoxide, Call the Fire departemnt ")
+    public void GasLeakDeviceSendAlert2(){
+        GasLeakDetector gasLeakDeviceSendAlert2 = new GasLeakDetector("GasLeakDeviceTest", true, 201);
+        assertEquals("Dangerous Levels Of Carbon Monoxide, Call the Fire departemnt", gasLeakDeviceSendAlert2.gasLeakDetetctedSendAlert());
+    }
+    @Test
+    @DisplayName("Test is a success: Life Threatening Levels of Carbon Monoxide,Call Emergency Services ")
+    public void GasLeakDeviceSendAlert3(){
+        GasLeakDetector gasLeakDeviceSendAlert3 = new GasLeakDetector("GasLeakDeviceTest", true, 802);
+        assertEquals("Life Threatening Levels of Carbon Monoxide,Call Emergency Services", gasLeakDeviceSendAlert3.gasLeakDetetctedSendAlert());
+    }
+    @Test
+    @DisplayName("Test is a success: Normal Levels Of Carbon Monoxide")
+    public void GasLeakDeviceSendAlert4(){
+        GasLeakDetector gasLeakDeviceSendAlert4 = new GasLeakDetector("GasLeakDeviceTest", true, 23);
+        assertEquals("Normal Levels Of Carbon Monoxide", gasLeakDeviceSendAlert4.gasLeakDetetctedSendAlert());
+    }
+
+
 
 
 }

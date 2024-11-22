@@ -50,6 +50,9 @@ public class TempratureAdjuster extends DeviceFoundation implements DeviceOn, De
 
 
     }
+    public String ChooseTemprature(Double temprature){
+        return "You set the Temprature to " + temprature + "";
+    }
 
 
 

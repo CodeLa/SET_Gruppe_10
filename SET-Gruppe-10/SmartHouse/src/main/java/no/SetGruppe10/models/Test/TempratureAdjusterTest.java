@@ -32,6 +32,12 @@ class TempratureAdjusterTest {
         TempratureAdjuster tempDeviceOnTest2 = new TempratureAdjuster("TestDeviceTemp", true, 24);
         assertEquals("The Temprature device was already On", tempDeviceOnTest2.turnDeviceOn());
     }
+    @Test
+    @DisplayName("Test is a Succsess: You managed to Choose Your Own  Temprature")
+    public void TempratureDeviceSetTempratureTest(){
+        TempratureAdjuster tempDeviceTempratureTest2 = new TempratureAdjuster("TestDeviceTemp", true, 24);
+        assertEquals( tempDeviceTempratureTest2.ChooseTemprature(24.0), tempDeviceTempratureTest2.ChooseTemprature(24.0));
+    }
 
 
 }

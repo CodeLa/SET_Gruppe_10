@@ -7,7 +7,7 @@ package no.SetGruppe10.models.AbstractClasses;
     protected Boolean isDeviceActive = true;
 
     public DeviceFoundation(String deviceName,  Boolean isDeviceActive) {
-        deviceName = deviceName;
+        this.deviceName = deviceName;
         this.isDeviceActive = isDeviceActive;
     }
 

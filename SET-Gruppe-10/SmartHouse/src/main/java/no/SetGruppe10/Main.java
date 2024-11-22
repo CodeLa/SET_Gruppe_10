@@ -85,7 +85,9 @@ public class Main {
         System.out.println("-----------------------");
         //Denne funkjsonen(turnDeviceOn) slår på enheten
         System.out.println("Funksjonen slår på enheten ---> " + gasDetecterUnit.turnDeviceOn());
+        //Denne funksjonen (turnDeviceOff) slår av enheten
         System.out.println("Funksjonen slår av enehten ---> " + gasDetecterUnit.turnDeviceOff());
+        //Denne funksjonen(gasLeakDetectionSendAlert) sender en varsel melding
         System.out.println("Funksjonen sender en varsel melding ---> " + gasDetecterUnit.gasLeakDetetctedSendAlert());
 
 
